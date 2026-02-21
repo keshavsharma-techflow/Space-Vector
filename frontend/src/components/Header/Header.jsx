@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 import { img, headerData } from "../../assets/asset";
-import { conData } from "../../context/Context.jsx";
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getCosmicBackendData } from "../../BackendCalls/callBackend.js";
