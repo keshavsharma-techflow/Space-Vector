@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 import { img, headerData } from "../../assets/asset";
-
+ const apiUrl = import.meta.env.VITE_API_URL;
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getCosmicBackendData } from "../../BackendCalls/callBackend.js";
@@ -112,7 +112,7 @@ else{
     // >
     <div
       className={styles.header}
-      style={{ backgroundImage: `url(http://localhost:8080/uploads/${data[idx].img_url})` }}
+      style={{ backgroundImage: `url(${apiUrl}uploads/${data[idx].img_url})` }}
     >
       <div className={styles.headerContent}>
         {/* <h3 className={styles.subTitle}>{headerData[idx].h3}</h3> */}
