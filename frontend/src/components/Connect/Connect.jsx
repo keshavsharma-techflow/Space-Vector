@@ -1,5 +1,5 @@
 import styles from "./Connect.module.css";
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+
 import { Link } from "react-router-dom";
 export default function Connect(){
 
