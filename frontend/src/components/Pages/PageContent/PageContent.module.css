@@ -1,0 +1,29 @@
+.pageContent ul{
+    list-style: none;
+    
+
+}
+.pageContent ul .item{
+      margin:10px;
+    color:#fff;
+    font-size:1rem;
+    
+}
+.pageContent ul a{
+    display: block;
+      margin:10px;
+    color:#fff;
+    font-size:1rem;
+    
+}
+
+.pageContent{
+      display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+.pageContent ul .item:hover{
+     text-decoration:underline dashed ;
+     cursor:pointer;
+}

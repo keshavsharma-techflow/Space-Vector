@@ -1,0 +1,29 @@
+.about{
+display:flex;
+flex-direction: column;
+justify-content: space-evenly;
+width:30%;
+height:90%;
+
+}
+.about h2{
+    font-size:1.5rem;
+    color: #fff;
+}
+.about p{
+    font-size:1rem;
+    color:#B9B9BB;
+}
+.about .btn{
+    font-size:1rem;
+    height: 2rem;
+    width: 5rem;
+    color:#fff;
+    background-color: transparent;
+    border:none;
+}
+
+#nasaMission :hover{
+    text-decoration: underline dashed;
+    cursor:pointer;
+}

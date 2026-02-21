@@ -1,0 +1,10 @@
+.detailDes{
+    display:flex;
+    padding:50px 40px;
+    justify-content:space-between;
+    gap:200px;
+    /* align-items: center; */
+    /* border:2px solid pink; */
+    width:90%;
+    margin :5px auto;
+}

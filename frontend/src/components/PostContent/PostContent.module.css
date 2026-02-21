@@ -1,0 +1,7 @@
+.postContent{
+flex:4 1 50%;
+}
+.articleText {
+  white-space: pre-line;
+  line-height: 1.8;
+}

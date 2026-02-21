@@ -1,0 +1,121 @@
+/* 
+.headerData{
+    height:90vh;
+    width:90%;
+    display:flex;
+    justify-content: center;
+align-items: center;
+}
+
+.headerForm{
+border:2px solid black;
+font-size:2rem;
+}
+
+.formContent{
+    height:500px;
+    width:500px;
+    display:flex;
+  
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.labelFields{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:20px;
+    border:2px solid red;
+
+}
+.inputFields{
+        display:flex;
+    flex-direction: column;
+align-items: flex-end;
+    gap:20px;
+      border:2px solid blue;
+} */
+
+.headerData {
+  margin:3px;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F6FA;
+ 
+}
+
+.headerForm {
+  border: 2px solid black;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow:10px 10px 10px ghostwhite;
+
+    background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* Each row */
+.formRow {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 20px;
+}
+
+/* Fixed label width */
+.formRow label {
+    flex: 1 1 80px;
+  text-align: right;
+}
+.radio{
+  flex:0.5 1 8px;
+  font-size: 1.4rem;
+ 
+  
+}
+
+/* Inputs grow evenly */
+.formRow input,
+.formRow textarea {
+ flex: 2 1 200px;
+  /* flex: 1; */
+  padding: 8px;
+  font-size: 1.2rem;
+   min-width: 0;
+
+     border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    font-size:1.3rem;
+    padding:2px 8px;
+    margin-left:0px;
+    border-radius:6px;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out 0s;
+
+    
+}
+
+.btn:hover {
+  background: #f2f2f2;
+}
+
+hr{
+  border:1px solid grey;
+}

@@ -1,0 +1,32 @@
+.connect{
+
+    width:20%;
+    height: 90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+        padding:3.3rem 0;
+    font-size:1rem;
+}
+.connect .para{
+  
+ font-size: 1rem;
+    color: #fff;
+}
+.mediaIconsCont{
+display:flex;
+justify-content: space-evenly;
+}
+.mediaIconsCont .btn{
+border:none;
+background-color: transparent;
+font-size: 1.2rem;
+margin:0px 4px;
+
+}
+
+.connect .para:hover{
+ text-decoration: underline dashed ;
+ cursor:pointer;
+}

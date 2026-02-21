@@ -1,0 +1,18 @@
+.planetCardContainer{
+  margin: 5% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor:pointer;
+}
+
+@media (max-width:650px) {
+  .planetCardContainer{
+    flex-direction: column;
+    height:auto;
+    gap:40px;
+    justify-content: center;
+  }
+ 
+
+}
