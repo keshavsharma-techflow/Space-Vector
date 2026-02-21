@@ -2,7 +2,7 @@ import styles from "./AdminLogin.module.css";
 import {useState} from "react";
 import axios from "axios";
 import {toast} from "react-toastify"
- const apiUrl = import.meta.env.VITE_API_URL;
+ const adminPanelUrl = import.meta.env.VITE_ADMIN_PANEL_URL;
 
 
 
@@ -28,7 +28,7 @@ export default function AdminLogin({setIsVerified}) {
        
       console.log(data);
 
-      let res = await axios.post(`${apiUrl}api/adminlogin`,{email:data.email,password:data.password});
+      let res = await axios.post(`${adminPanelUrl}api/adminlogin`,{email:data.email,password:data.password});
       console.log(res,"inside adminlogin.jsx");
 
         setData((prevData) => { return {...prevData,email:"",password:""}});
