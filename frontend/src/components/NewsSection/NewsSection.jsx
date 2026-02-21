@@ -1,5 +1,5 @@
 import styles from "./NewsSection.module.css"
-
+ const apiUrl = import.meta.env.VITE_API_URL;
 import { Link } from "react-router-dom";
 import {useEffect,useState} from 'react';
 import { getNewsData } from "../../BackendCalls/callBackend.js";
@@ -26,7 +26,7 @@ return(
           <div className={styles.newsContentList} id="n&e">
         <Link to="/pageContent" 
         state={info[0]}
-          style={{backgroundImage:`url(http://localhost:8080/uploads/${info[0].img_url})`}}
+          style={{backgroundImage:`url(${apiUrl}uploads/${info[0].img_url})`}}
           className={`${styles.newsContent0} ${active == 0 ? styles.cardEffect : styles.remCardEffect}`}
           onClick={() => setCardStyle(0)}
         >
@@ -35,7 +35,7 @@ return(
 
          <Link to="/pageContent"
            state={info[1]}
-          style={{backgroundImage:`url(http://localhost:8080/uploads/${info[1].img_url})`}}
+          style={{backgroundImage:`url(${apiUrl}uploads/${info[1].img_url})`}}
           className={`${styles.newsContent1} ${active == 1 ? styles.cardEffect : styles.remCardEffect}`}
           onClick={() => setCardStyle(1)}
         >
@@ -46,7 +46,7 @@ return(
           
           <Link to="/pageContent"
             state={info[2]}
-           style={{backgroundImage:`url(http://localhost:8080/uploads/${info[2].img_url})`}}
+           style={{backgroundImage:`url(${apiUrl}uploads/${info[2].img_url})`}}
             className={`${styles.newsContent2} ${active == 2 ? styles.cardEffect : styles.remCardEffect}`}
             onClick={() => setCardStyle(2)}
           >
@@ -55,7 +55,7 @@ return(
 
          <Link to="/pageContent"
            state={info[3]}
-          style={{backgroundImage:`url(http://localhost:8080/uploads/${info[3].img_url})`}}
+          style={{backgroundImage:`url(${apiUrl}uploads/${info[3].img_url})`}}
             className={`${styles.newsContent3} ${active == 3 ? styles.cardEffect : styles.remCardEffect}`}
             onClick={() => setCardStyle(3)}
           >
