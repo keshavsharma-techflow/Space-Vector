@@ -1,5 +1,5 @@
 import styles from "./NewsSection.module.css"
-import { news } from "../../assets/asset.js";
+
 import { Link } from "react-router-dom";
 import {useEffect,useState} from 'react';
 import { getNewsData } from "../../BackendCalls/callBackend.js";
