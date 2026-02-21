@@ -1,4 +1,5 @@
 import styles from "./PostContent.module.css";
+ const apiUrl = import.meta.env.VITE_API_URL;
 
 export default function PostContent({ obj }) {
   return (
@@ -7,7 +8,7 @@ export default function PostContent({ obj }) {
         <h1>{obj.heading}</h1>
         <br />
         <img
-          src={`http://localhost:8080/uploads/${obj.img_url}`}
+          src={`${apiUrl}uploads/${obj.img_url}`}
           alt="img"
           style={{ width: "90%", height: "500px" }}
         ></img>
