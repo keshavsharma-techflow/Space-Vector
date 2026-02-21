@@ -1,4 +1,4 @@
-import AdminLogin from "../src/components/AdminLogin/AdminLogin";
+import AdminLogin from "../src/components/adminLogin/AdminLogin";
 import {useState} from 'react';
 
 
