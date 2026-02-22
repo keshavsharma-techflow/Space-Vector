@@ -107,6 +107,7 @@ import styles from "./HeaderData.module.css";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+ const apiUrl = import.meta.env.VITE_API_URL;
 
 export default function HeaderData({monitorActiveComponent}) {
   let [data, setData] = useState({
@@ -150,7 +151,7 @@ export default function HeaderData({monitorActiveComponent}) {
       // ✅ correct (route exists)
       toast.success(" Cosmic Data uploaded successfully 🚀");
       console.log(data);
-      let res = await axios.post("http://localhost:8080/api/media/header", formData);
+      let res = await axios.post(`${apiUrl}api/media/header`, formData);
       setData({
         img: "",
         head: "",
