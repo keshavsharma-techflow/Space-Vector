@@ -165,7 +165,7 @@ export default function HeaderData({monitorActiveComponent}) {
       monitorActiveComponent(null);
     } catch (err) {
       toast.error(
-        "-------------- ❌ Something went wrong! in Admin/src/components/headerData/HeaderData.jsx/AdminPanel/HeaderData while sending data through axios ❌",
+        "-------------- ❌ Something went wrong! in Admin/src/components/AdminPanel/headerData/HeaderData.jsx while sending data through axios ❌",
       );
       console.log("full axios error  ", err);
     }
