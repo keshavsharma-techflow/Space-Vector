@@ -22,7 +22,7 @@ let updateMedia = async (req, res) => {
     await c1.save();
 
     //broadcasting
-    await broadcastController({heading,description});
+     broadcastController({heading,description});
 
       res.status(200).json({ success: true });
   } catch (err) {
