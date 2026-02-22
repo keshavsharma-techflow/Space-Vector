@@ -93,16 +93,12 @@ export default async function broadcastController(obj) {
     console.log("📢 Subscribers:", subscribers.length);
 
     // 🔥 Fire-and-forget (Render-safe)
-    subscribers.forEach(async (user) => {
-      try {
-        await sendPost(user.email, obj);
-        console.log("✅ Sent to:", user.email);
-      } catch (err) {
-        console.error("❌ Failed for:", user.email, err.message);
-      }
-    });
-
+    for (const user of subscribers) {
+  try {
+    await sendPost(user.email, obj);
+    console.log("✅ Sent to:", user.email);
   } catch (err) {
-    console.error("❌ Broadcast error:", err);
+    console.error("❌ Failed for:", user.email, err.message);
   }
+}
 }
