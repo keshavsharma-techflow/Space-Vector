@@ -1,5 +1,5 @@
 import styles from "./NewsData.module.css";
-
+ const apiUrl = import.meta.env.VITE_API_URL;
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -51,7 +51,7 @@ export default function NewsData({monitorActiveComponent}) {
       // ✅ correct (route exists)
       toast.success(" Cosmic Data uploaded successfully 🚀");
       console.log(data);
-      let res = await axios.post("http://localhost:8080/api/media/news", formData);
+      let res = await axios.post(`${apiUrl}api/media/news`, formData);
       setData({
         img: "",
         head: "",
