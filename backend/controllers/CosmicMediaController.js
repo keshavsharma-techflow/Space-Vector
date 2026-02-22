@@ -21,11 +21,10 @@ let updateMedia = async (req, res) => {
   try {
     await c1.save();
 
-    res.status(200).json({ success: true });
-
-    //broadcastin
-
+    //broadcasting
     await broadcastController({heading,description});
+
+      res.status(200).json({ success: true });
   } catch (err) {
     console.log(err);
     res.status(404).json({ success: false });
