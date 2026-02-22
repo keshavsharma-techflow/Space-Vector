@@ -34,7 +34,7 @@ export default function NewsletterSignup() {
         toast.success(" Subscribed successfully 🚀");
       console.log(data);
       console.log(formData);
-      let res = await axios.post(`${apiUrl}api/signup`,formData);
+      let res =  axios.post(`${apiUrl}api/signup`,formData);
 
         setData((prevData) => { return {...prevData,email:"",firstName:"",lastName:"",city:"",zipCode:"",state:"",country:""}});
      }
