@@ -62,6 +62,7 @@
 //   }
 // }
 
+
 import subscriberModel from "../models/SubscriberModel.js";
 import { Resend } from "resend";
 
@@ -100,5 +101,8 @@ export default async function broadcastController(obj) {
   } catch (err) {
     console.error("❌ Failed for:", user.email, err.message);
   }
+}}
+catch (err) {
+    console.error("❌ broadcastController error:", err);
+  }
 }
-
