@@ -2,7 +2,7 @@ import styles from "./LoginPopUp.module.css";
 import {useState} from "react";
 import axios from "axios";
 import {toast} from "react-toastify"
-
+ const apiUrl = import.meta.env.VITE_API_URL;
 
 
 
@@ -34,7 +34,7 @@ export default function NewsletterSignup() {
         toast.success(" Subscribed successfully 🚀");
       console.log(data);
       console.log(formData);
-      let res = await axios.post("http://localhost:8080/api/signup",formData);
+      let res = await axios.post(`${apiUrl}api/signup`,formData);
 
         setData((prevData) => { return {...prevData,email:"",firstName:"",lastName:"",city:"",zipCode:"",state:"",country:""}});
      }
