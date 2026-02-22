@@ -12,10 +12,11 @@ let updateSubscribeData = async(req,res) =>{
     let{email,firstName,lastName,city,zipCode,state,country} = req.body;
  let s1 = new subscriberModel({email,firstName,lastName,city,zipCode,state,country, emailVerifyToken});
  try{
+
+     await s1.save();
     await sendVerificationMail(email,emailVerifyToken);
  
     console.log("hogaya save");
-    await s1.save();
       
     res.status(200).json({"success":true})
 
