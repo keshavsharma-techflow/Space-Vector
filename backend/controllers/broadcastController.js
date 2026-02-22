@@ -125,15 +125,14 @@ export default async function broadcastController(obj) {
 
     if (!subscribers.length) return;
 
-    // ✅ COLLECT ALL EMAILS
-    const emails = subscribers.map((user) => user.email);
+    // 🔥 PICK ONLY ONE EMAIL (FIRST ONE)
+    const email = subscribers[0].email;
 
-    console.log("📨 Sending to:", emails);
+    console.log("📨 Sending to (test mode):", email);
 
-    // ✅ SINGLE RESEND CALL (THIS IS THE FIX)
     await resend.emails.send({
       from: "Space Vector <onboarding@resend.dev>",
-      to: emails, // 👈 ARRAY, NOT LOOP
+      to: email, // ✅ SINGLE EMAIL ONLY
       subject: "New post published 🚀",
       html: `
         <h2>${obj.heading}</h2>
@@ -142,7 +141,7 @@ export default async function broadcastController(obj) {
       `,
     });
 
-    console.log("✅ Broadcast sent to all users");
+    console.log("✅ Test email sent successfully");
   } catch (err) {
     console.error("❌ broadcastController error:", err.message);
   }
