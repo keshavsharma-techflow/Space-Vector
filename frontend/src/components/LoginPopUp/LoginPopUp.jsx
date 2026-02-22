@@ -103,8 +103,9 @@ export default function NewsletterSignup() {
               <select id="country" name="country" value={data.country} onChange={onFieldClick}>
                 <option disabled value="">Select a country</option>
                 <option value="India">India</option>
-                <option value="USA">USA</option>
-                <option value="China">China</option>
+                <option value="USA" disabled>USA</option>
+                <option value="China" disabled>China</option>
+                <option value="Russia" disabled>Russia</option>
               </select>
             </div>
 
